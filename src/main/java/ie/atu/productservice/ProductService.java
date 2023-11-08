@@ -1,19 +1,16 @@
 package ie.atu.productservice;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Service;
+import java.util.ArrayList;
 
-
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Service
 public class ProductService {
-    private String addProduct;
-    private String getProductId;
-    private String quantity;
-    private String wareHouseId;
-    private String capacity;
-    private String location;
+    public String addProduct(String Product){
+        return ("ProductID: " + Product);
+    }
+
+    public String getProductID(String ProductID){
+        return ("ProductID: " + ProductID);
+    }
+
 }

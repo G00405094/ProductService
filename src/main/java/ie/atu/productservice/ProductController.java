@@ -13,10 +13,10 @@ public class ProductController {
     public ProductController(WarehouseServiceClient warehouseServiceClient){this.warehouseServiceClient = warehouseServiceClient;}
 
     @PostMapping("/add-product")
-    public String Product(@RequestBody ProductService productService){
-        String ProductId = warehouseServiceClient.someDetails(productService);
+    public String Product(@RequestBody ProductData productData){
+        String ProductId = warehouseServiceClient.someDetails(productData);
 
-        String messageResponse = ProductId + "ProductID: " + productService.getGetProductId() + "Can Product be added:" +productService.getAddProduct();
+        String messageResponse = ProductId + "ProductID: " + productData.getProductId() + "Can Product be added:" +productData.getProduct();
         return messageResponse;
     }
 }
