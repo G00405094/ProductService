@@ -16,7 +16,7 @@ public class ProductController {
     public String Product(@RequestBody ProductService productService){
         String ProductId = warehouseServiceClient.someDetails(productService);
 
-        String Response = ProductId + "ProductID: " + productService.getGetProductId() + "Can Product be added:" +productService.getAddProduct();
-        return Response;
+        String messageResponse = ProductId + "ProductID: " + productService.getGetProductId() + "Can Product be added:" +productService.getAddProduct();
+        return messageResponse;
     }
 }
